@@ -1,0 +1,5 @@
+# This file holds the urls with text you'd like to grab
+# Some sample urls:
+
+https://www.npr.org/sections/thesalt/2018/06/14/618329461/despite-a-revamped-focus-on-real-life-skills-home-ec-classes-fade-away
+https://www.npr.org/2018/06/14/612387464/report-expected-to-condemn-fbi-violations-in-2016-clinton-email-investigation

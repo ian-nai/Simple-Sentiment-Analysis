@@ -23,5 +23,5 @@ or
 >>> Sentiment.naive('your_filename.txt')
 >>> [your output]
 ```
-  
+The training sentences for the Naive Bayes classifier can easily be swapped out for your own.
  

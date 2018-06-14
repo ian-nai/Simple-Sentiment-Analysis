@@ -13,12 +13,14 @@ The script will save the text it scrapes as .txt files in the project's director
 ## Perform Sentiment Analysis
 Open python, import sentiment.py, and perform sentiment analysis on your texts using [Vader](https://www.nltk.org/_modules/nltk/sentiment/vader.html) or the [Naive Bayes classifier](https://www.nltk.org/_modules/nltk/classify/naivebayes.html). The training sentences for the Naive Bayes classifier can easily be swapped out for your own. 
 ```
+>>> python
 >>> from sentiment import Sentiment
 >>> Sentiment.vader('your_filename.txt')
 >>> [sentiment analysis of your text]
 ```
 or
 ```
+>>> python
 >>> from sentiment import Sentiment
 >>> Sentiment.naive('your_filename.txt')
 >>> [sentiment analysis of your text]

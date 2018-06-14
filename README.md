@@ -11,17 +11,16 @@ Input urls you'd like to scrape in the urls.txt file, then run scrape.py:
 The script will save the text it scrapes as .txt files in the project's directory. The script searches for `<p>` tags by default, but what it looks for can easily be edited in the .py file. Just change the line `paragraphs = soup.find_all('p')` to search for things other than "p".
   
 ## Perform Sentiment Analysis
-Open python, import sentiment.py, and perform sentiment analysis on your texts using [Vader](https://www.nltk.org/_modules/nltk/sentiment/vader.html) or the [Naive Bayes classifier](https://www.nltk.org/_modules/nltk/classify/naivebayes.html):
+Open python, import sentiment.py, and perform sentiment analysis on your texts using [Vader](https://www.nltk.org/_modules/nltk/sentiment/vader.html) or the [Naive Bayes classifier](https://www.nltk.org/_modules/nltk/classify/naivebayes.html). The training sentences for the Naive Bayes classifier can easily be swapped out for your own. 
 ```
 >>> from sentiment import Sentiment
 >>> Sentiment.vader('your_filename.txt')
->>> [your output]
+>>> [sentiment analysis of your text]
 ```
 or
 ```
 >>> from sentiment import Sentiment
 >>> Sentiment.naive('your_filename.txt')
->>> [your output]
+>>> [sentiment analysis of your text]
 ```
-The training sentences for the Naive Bayes classifier can easily be swapped out for your own.
  

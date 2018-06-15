@@ -54,5 +54,5 @@ class Sentiment(object):
             sents = nltk.sent_tokenize(text)
             for s in sents:                
                 q = TextBlob(s)
-                print q.sentiment
+                print s, q.sentiment
                 

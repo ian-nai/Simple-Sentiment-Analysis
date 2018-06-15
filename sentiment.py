@@ -1,12 +1,13 @@
 import nltk
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from nltk.tokenize import word_tokenize
+from textblob import TextBlob
+import io
 
 class Sentiment(object):
   
     @staticmethod 
     def vader(file):
-        sent_list = []
         analyzer = SentimentIntensityAnalyzer()
         with open(file, 'r') as in_file:
             text = in_file.read()
@@ -20,7 +21,7 @@ class Sentiment(object):
   
         
         train = [("It's practical to hope because the hope is for us to survive as a human species.", "pos"),
-                 ("Italy’s soccer players were unlucky to find themselves in a qualifying group with the exceptional Spain, and unlucky again to be drawn against a tough, determinedly physical Sweden in a playoff where absolutely nothing went right.", "neg"),
+                 ("Italy's soccer players were unlucky to find themselves in a qualifying group with Spain", "neg"),
                  ("Instead, root for the Knights whose fans are childlike in their glee.", "pos"),
                  ("The overwhelming perception is that the European Union has done very little to alleviate this specifically Italian difficulty.", "neg"),
                  ("We are in for a period of painful social conflict, at the end of which perhaps we may remember why it once seemed wise to relegate certain emotions to the stadium.", "neg"),
@@ -45,3 +46,13 @@ class Sentiment(object):
                 test_data_features = {word.lower(): (word in word_tokenize(test_data.lower())) for word in dictionary}
   
                 print s, (classifier.classify(test_data_features))
+                
+    @staticmethod 
+    def blob(file):
+        with io.open(file, 'r', encoding='utf-8') as in_file:
+            text = in_file.read()
+            sents = nltk.sent_tokenize(text)
+            for s in sents:                
+                q = TextBlob(s)
+                print q.sentiment
+                

@@ -27,7 +27,7 @@ for the Naive Bayes classifier:
 ```
 or for TextBlob:
 ```
- >>> python
+>>> python
 >>> from sentiment import Sentiment
 >>> Sentiment.blob('your_filename.txt')
 >>> [sentiment analysis of your text]

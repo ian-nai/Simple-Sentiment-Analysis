@@ -19,7 +19,6 @@ class Sentiment(object):
     @staticmethod
     def naive(file):
 
-
         train = [("It's practical to hope because the hope is for us to survive as a human species.", "pos"),
                  ("Italy's soccer players were unlucky to find themselves in a qualifying group with Spain", "neg"),
                  ("Instead, root for the Knights whose fans are childlike in their glee.", "pos"),
@@ -28,13 +27,9 @@ class Sentiment(object):
                  ("The heartlessness of that is mind-boggling.", "neg"),
                  ("My father was an insatiable learner with intelligence that his baby brother once told me bordered on genius.", "pos"),
                 ]
-
-
         dictionary = set(word.lower() for passage in train for word in word_tokenize(passage[0]))
 
-
         t = [({word: (word in word_tokenize(x[0])) for word in dictionary}, x[1]) for x in train]
-
 
         classifier = nltk.NaiveBayesClassifier.train(t)
 

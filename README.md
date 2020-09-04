@@ -1,5 +1,5 @@
 # Simple Sentiment Analysis
-Simple scripts for performing sentiment analysis in Python. This repository is intended as a basic introduction to sentiment analysis using Python, and may be used as a launching point for more in-depth sentiment analysis work. The actual sentiment analysis work is done using the [Natural Language Toolkit (NLTK)](http://www.nltk.org/) and [TextBlob](http://textblob.readthedocs.io/en/dev/). Additional documentation on using NLTK for sentiment analysis can be found [here](http://www.nltk.org/howto/sentiment.html).
+Simple scripts for performing sentiment analysis in Python. This repository is intended as a basic introduction to sentiment analysis using Python, and may be used as a launching point for more in-depth sentiment analysis work. The actual sentiment analysis work is done using [Vader](https://github.com/cjhutto/vaderSentiment), the [Natural Language Toolkit (NLTK)](http://www.nltk.org/) and [TextBlob](http://textblob.readthedocs.io/en/dev/). Additional documentation on using NLTK for sentiment analysis can be found [here](http://www.nltk.org/howto/sentiment.html).
 
 ## Getting Started
 Install the code's dependencies:
